@@ -1,6 +1,7 @@
 const fs = require('fs');
 const PNG = require('pngjs').PNG;
 const cliArgs = require('command-line-args');
+const terminatorChar = '03';
 
 parseInput();
 
@@ -28,7 +29,8 @@ function parseInput() {
 }
 
 function hideData(params) {
-  const inputData = strToHex(params.text);
+  const inputData = strToHex(params.text) + terminatorChar;
+  console.log(inputData);
   const keyMatrix = createKeyMatrix();
 
   parseImage(params.image).then((png) => {
@@ -44,10 +46,15 @@ function showData(params) {
     const data = png.data.filter(filterAplha);
     let index = 0;
     let res = '';
+    let parseCompleted = false;
 
-    while (index < data.length) {
+    while (!parseCompleted && index < data.length) {
       res += keyMatrix[data[index]][data[index+1]];
       index += 2;
+      if (res.slice(-2) === terminatorChar) {
+        parseCompleted = true;
+        res = res.slice(0, -2);
+      }
     }
 
     res = hexToStr(res);
