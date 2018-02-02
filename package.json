@@ -7,6 +7,7 @@
   "author": "tlumko",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.4",
     "pngjs": "^3.3.1"
   },
   "directories": {
