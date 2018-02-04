@@ -2,10 +2,10 @@
   "name": "just-one-more-stegano-js",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "lib/main.js",
   "preferGlobal": "true",
   "author": "tlumko",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
