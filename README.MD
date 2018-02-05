@@ -1,24 +1,24 @@
 just-one-more-stegano-js
 
-paragraph about steganography
-paragraph about this implementation
+paragraph about steganography  
+paragraph about this implementation  
 
-instalation
-npm i -g git+https://github.com/tlumko/just-one-more-stegano-js.git
+instalation  
+`npm i -g git+https://github.com/tlumko/just-one-more-stegano-js.git`
 
-usage
-joms hide image.png 'text to hide'
-joms parse image.png
+usage  
+`joms hide image.png 'text to hide'`  
+`joms parse image.png`  
 
-options
---modify-existing-image - self explaining
---dont-touch-my-alpha-channel - not modify image transparancy.
---generate-key - generate random key which is needed to parse image
---key <keyfilename> - use key to parse or encode image 
+options  
+`--modify-existing-image` - modify given image rather than create new  
+`--dont-touch-my-alpha-channel` - doesn't modify image transparancy.  
+`--generate-key` - generate random key
+`--key <keyfilename>` - use key to parse or encode image  
 
-in-depth paragrpah
+in-depth paragraph
 
-faq
+faq 
 - haven't heard any
 
 roadmap
