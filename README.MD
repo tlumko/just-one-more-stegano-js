@@ -4,7 +4,7 @@ paragraph about steganography
 paragraph about this implementation
 
 instalation
-npm i -g git+github.com/tlumko/just-one-more-stegano-js
+npm i -g git+https://github.com/tlumko/just-one-more-stegano-js.git
 
 usage
 joms hide image.png 'text to hide'
@@ -19,7 +19,7 @@ options
 in-depth paragrpah
 
 faq
-- haven't heard any question
+- haven't heard any
 
 roadmap
 - not linear pixel usage
@@ -28,9 +28,10 @@ roadmap
 - sudoku matrix key
 - read/write text from/to file
 - apply modifications to all unused pixels
-- hide info diff file format
+- hide info different file format
 - bmp
 - recursive encoding
 - browser client
 
 it is not likely that any of this features would be ever done
+
