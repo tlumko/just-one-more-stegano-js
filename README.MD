@@ -12,8 +12,8 @@ usage
 
 options  
 `--modify-existing-image` - modify given image rather than create new  
-`--dont-touch-my-alpha-channel` - doesn't modify image transparancy.  
-`--generate-key` - generate random key
+`--dont-touch-my-alpha-channel` - doesn't modify image transparancy  
+`--generate-key` - generate random key  
 `--key <keyfilename>` - use key to parse or encode image  
 
 in-depth paragraph
