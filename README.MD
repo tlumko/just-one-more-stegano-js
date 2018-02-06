@@ -3,6 +3,7 @@ just-one-more-stegano-js
 paragraph about steganography  
 paragraph about this implementation  
 
+
 instalation  
 `npm i -g git+https://github.com/tlumko/just-one-more-stegano-js.git`
 
@@ -18,10 +19,10 @@ options
 
 in-depth paragraph
 
-faq 
+faq  
 - haven't heard any
 
-roadmap
+roadmap  
 - not linear pixel usage
 - password
 - encoding with lower impact (8-bit matrix rather than 16-bit)
@@ -32,6 +33,7 @@ roadmap
 - bmp
 - recursive encoding
 - browser client
+- unicode support
 
 it is not likely that any of this features would be ever done
 
