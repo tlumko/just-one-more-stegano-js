@@ -1,7 +1,7 @@
 just-one-more-stegano-js
 
-paragraph about steganography  
-paragraph about this implementation  
+[placeholder] paragraph about steganography  
+[placeholder] paragraph about this implementation  
 
 
 instalation  
@@ -13,11 +13,12 @@ usage
 
 options  
 `--modify-existing-image` - modify given image rather than create new  
-`--dont-touch-my-alpha-channel` - doesn't modify image transparancy  
+`--do-not-touch-transparency` - doesn't modify image transparancy  
 `--generate-key` - generate random key  
 `--key <keyfilename>` - use key to parse or encode image  
+`--system <system>` - numeral system for encoding matrix. Choose one of following: base4, base8, base16, base64. base16 by default. It affects the amount info you can hide and how much image is damaged. The lower system - less damage, less info. Details in next paragraph.
 
-in-depth paragraph
+[placeholder] in-depth paragraph
 
 faq  
 - haven't heard any
