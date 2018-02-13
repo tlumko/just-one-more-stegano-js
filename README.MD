@@ -17,6 +17,7 @@ options
 `--generate-key` - generate random key  
 `--key <keyfilename>` - use key to parse or encode image  
 `--system <system>` - numeral system for encoding matrix. Choose one of following: base4, base8, base16, base64. base16 by default. It affects the amount info you can hide and how much image is damaged. The lower system - less damage, less info. Details in next paragraph.
+`--password, -p` - require password
 
 [placeholder] in-depth paragraph
 
