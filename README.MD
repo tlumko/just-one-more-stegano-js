@@ -18,6 +18,7 @@ options
 `--key <keyfilename>` - use key to parse or encode image  
 `--password, -p` - require password  
 `--unicode, -u` - add this flag if your input is out of ascii range  
+`--harm-all-pixels, --noise, -n` - harm all pixels that wasn't harmed during message concealing  
 `--system <system>` - numeral system for encoding matrix. Choose one of following: base4, base8, base16, base64. base16 by default. It affects the amount info you can hide and how much image is damaged. The lower system - less damage, less info. Details in next paragraph.  
 
 [placeholder] in-depth paragraph
@@ -26,17 +27,17 @@ faq
 - haven't heard any
 
 roadmap  
-- not linear pixel usage
-- password
-- encoding with lower impact (8-bit matrix rather than 16-bit)
-- sudoku matrix key
-- read/write text from/to file
-- apply modifications to all unused pixels
-- hide info different file format
-- bmp
+- HUGE refactoring
+- read/write data from/to file
+- input validation
+- input image
+- min-harm encoding system autoselect
+- bmp (jpeg?)
 - recursive encoding
 - browser client
-- unicode support
+- sudoku matrix key
+- _normal_ package.json
+- _normal_ readme
 
 it is not likely that any of this features would be ever done
 
