@@ -27,9 +27,9 @@ faq
 
 roadmap  
 - HUGE refactoring
-- read/write data from/to file
+- base4096, base32k
 - input validation
-- input image
+- progress bar
 - min-harm encoding system autoselect
 - bmp (jpeg?)
 - recursive encoding
