@@ -7,7 +7,7 @@ instalation
 `npm i -g git+https://github.com/tlumko/just-one-more-stegano-js.git`
 
 usage  
-`joms embed image.png 'text to embed'`  
+`joms embed image.png 'text to embed'` or  `joms embed image.png <filename>`  
 `joms parse image.png`  
 
 options  
@@ -16,9 +16,9 @@ options
 `--generate-key` - generate random key  
 `--key <keyfilename>` - use key to parse or encode image  
 `--password, -p` - require password  
-`--unicode, -u` - add this flag if your input is out of ascii range  
-`--harm-all-pixels, --noise, -n` - harm all pixels that wasn't harmed during message concealing  
-`--system <system>` - numeral system for encoding matrix. Choose one of the following: base4, base8, base16, base64, ascii. base16 by default. It affects the embeding capacity and visual quality. The lower system - less damage to image, less info possible to embed. Details in next paragraph.  
+`--unicode, -u` - add this flag if your text input is out of ascii range  
+`--harm-all-pixels, --noise, -n` [broken] - harm all pixels that wasn't harmed during message concealing  
+`--system <system>` - numeral system for encoding matrix. Choose one of the following: base4, base8, base16, base64. base16 by default. It affects the embeding capacity and visual quality. The lower system - less damage to image, less info possible to embed. Details in next paragraph.  
 
 [placeholder] in-depth paragraph
 
