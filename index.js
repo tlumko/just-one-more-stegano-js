@@ -1,41 +1,47 @@
-const { createBackground } = require('./background')
-const { createMatrix } = require('./matrix')
-const { unicodeToHex, hexToUnicode } = require('./string-utils')
+const { parse } = require('./parse')
+const { embed } = require('./embed')
 
-;(async () => {
-  await embed()
-  await parse()
-})()
+parseInput()
 
+async function parseInput() {
+  const [command, image, file, text] = process.argv.slice(2)
 
-async function embed() {
-  const input = unicodeToHex('asdf')
-  const background = await createBackground('./example.png')
-  const matrix = createMatrix()
-
-  for (let i = 0; i < input.length; i++) {
-    const char = input[i]
-    const fragment = background.takeFragment()
-    const charCoord = matrix.findAround({x: fragment[0].val, y: fragment[1].val}, char)
-    background.replaceFragment(fragment, charCoord.x, charCoord.y)
+  if (!command || !image) {
+    showHelp()
+    return
   }
 
-  await background.writeImage('111.png')
+  if (command === 'embed') {
+    if (!file) {
+      showHelp()
+      return
+    }
 
-  console.log('embeded')
-}
+    if (file === '-t' || file === '-text') {
+      await embed(image, text, true)
+      console.log('done')
+      return
+    }
 
-async function parse() {
-  const matrix = createMatrix()
-  const background = await createBackground('./111.png')
-
-  let res = ''
-  for (let i = 0; i < 16; i++) {
-    const fragment = background.takeFragment()
-    const char = matrix.get(fragment[0].val, fragment[1].val)
-    res += char
+    await embed(image, file)
+    console.log('done')
+    return
   }
 
-  const output = hexToUnicode(res)
-  console.log(output)
+  if (command === 'parse') {
+    await parse(image)
+    console.log('done')
+    return
+  }
+
+  showHelp()
 }
+
+function showHelp() {
+  console.log('usage: embed|parse <image.png> [--text] [<file>|<text payload>] ')
+}
+
+// ;(async () => {
+//   await embed()
+//   await parse()
+// })()

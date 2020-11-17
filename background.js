@@ -34,7 +34,15 @@ async function createBackground(img) {
 
     pos++
 
+    if (isAlpha(pos)) {
+      pos++
+    }
+
     return res
+  }
+
+  function isAlpha(index) {
+    return !((index+1)%4);
   }
 
   function writeImage(filename) {
