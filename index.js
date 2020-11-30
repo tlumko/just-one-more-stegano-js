@@ -29,6 +29,8 @@ async function parseInput() {
     return
   }
 
+  //3
+
   if (command === 'parse') {
     await parse(image)
     console.log('done')
