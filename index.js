@@ -2,6 +2,7 @@ const { parse } = require('./parse')
 const { embed } = require('./embed')
 
 parseInput()
+//1
 
 async function parseInput() {
   const [command, image, file, text] = process.argv.slice(2)
