@@ -41,6 +41,8 @@ function showHelp() {
   console.log('usage: embed|parse <image.png> [--text] [<file>|<text payload>] ')
 }
 
+//2
+
 // ;(async () => {
 //   await embed()
 //   await parse()
